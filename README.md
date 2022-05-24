@@ -27,7 +27,7 @@ Create a `tsconfig.json` file in the root of your project and add these configs:
 }
 ```
 
-The descriptions of these options can be found here: https://www.typescriptlang.org/tsconfig
+Here is an explanation of these config options. The descriptions for these options can also be found here: https://www.typescriptlang.org/tsconfig.
 
 * `compilerOptions`: These options make up the bulk of TypeScript’s configuration and it covers how the language should work.
     * `strict`: The strict flag enables a wide range of type checking behavior that results in stronger guarantees of program correctness. Turning this on is equivalent to enabling all of the strict mode family options, which are outlined below. You can then turn off individual strict mode family checks as needed.
