@@ -15,8 +15,11 @@ Create a `tsconfig.json` file in the root of your project and add these configs:
     "strict": true,
     "allowJs": true,
     "checkJs": true,
+    "resolveJsonModule": true,
     "noEmitOnError": true,
-    "sourceMap": true,
+    "moduleResolution": "node",
+		"module": "es2020",
+		"lib": ["es2020", "DOM"],
     "target": "es6",
     "outDir": "dist"
   },
@@ -31,6 +34,7 @@ The descriptions of these options can be found here: https://www.typescriptlang.
     * `allowJs`: Allow JavaScript files to be imported inside your project, instead of just `.ts` and `.tsx` files. 
         * NOTE: This option is required in order to use JSDocs to provide type checking in your `.js` files. If you don't add this option, then the build process will ignore your `.js` files, which is not what you want.
     * `checkJs`: Works in tandem with `allowJs`. When `checkJs` is enabled then errors are reported in JavaScript files (but only during the build process). This is the equivalent of including `// @ts-check` at the top of all JavaScript files which are included in your project.
+        * NOTE: If you have the `checkJs: true` option set in `tsconfig.json`, then VSCode should show type checking errors as you type them. If you do not see type checking errors, try closing out all VSCode windows that you have open and reopening them. That should enable your `tsconfig.json` settings and you should be able to see type checking errors in your `.js` files.
     * `resolveJsonModule`: Allows importing modules with a ‘.json’ extension, which is a common practice in node projects.
     * `noEmitOnError`: Do not emit compiler output files like JavaScript source code, source-maps or declarations if any errors were reported.
     * `moduleResolution`: Specify the module resolution strategy. `node` is for Node.js’ CommonJS implementation.
@@ -57,8 +61,6 @@ Now you can run `npm run build` to build your plain `.js` files and get type che
 
 ## Step 5
 Write JavaScript code like you normally would inside of `.js` files instead of `.ts` files, but remember to use JSDocs in your code in order to get type checking. Then run `npm run build` to run the build process and check for type errors.
-
-NOTE: VSCode will show errors as you type them if you add `// @ts-check` to the top of your `.js` files. If you are already using `checkJs` in your `tsconfig.json` file, then this won't give you any additional build-time features, but it will help you catch errors before you try to build your files with `npm run build`.
 
 ## Step 6
 Create a test script that also uses TypeScript:
