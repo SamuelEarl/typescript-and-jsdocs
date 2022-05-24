@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "allowJs": true,
+    "checkJs": true,
+    "resolveJsonModule": true,
+    "noEmitOnError": true,
+    "moduleResolution": "node",
+		"module": "es2020",
+		"lib": ["es2020", "DOM"],
+    "target": "es5",
+    "outDir": "dist"
+  },
+  "include": ["src/**/*"]
+}

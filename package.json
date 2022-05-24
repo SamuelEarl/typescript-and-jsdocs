@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "jest && tsc",
+    "build": "tsc --build"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.2"
+  }
+}
