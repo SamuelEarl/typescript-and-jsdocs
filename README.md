@@ -18,8 +18,8 @@ Create a `tsconfig.json` file in the root of your project and add these configs:
     "resolveJsonModule": true,
     "noEmitOnError": true,
     "moduleResolution": "node",
-		"module": "es2020",
-		"lib": ["es2020", "DOM"],
+    "module": "es2020",
+    "lib": ["es2020", "DOM"],
     "target": "es6",
     "outDir": "dist"
   },
